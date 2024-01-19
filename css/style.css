@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* background-image: url('../img/stacked-waves-haikei.png'); */
+    background-image: url('../img/pexels-ethan-brooke-5039003.jpg');
+    background-size: cover;
+    background-position: center;
+    /* background-repeat: space; */
+    background-repeat: repeat-y;
+}
+
+.wrapper-input {
+    width: 100%;
+}
+
+label {
+    color: #FFF;
+    width: 100%;
+}
+
+input[type='text'] {
+    width: 90%;
+    padding: 3px 7px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+
+
+@media screen and (max-width: 800px) {
+    form {
+        margin: 20px auto;
+        width: 90%;
+    }
+
+    .wrapper-control {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .wrapper-input {
+        width: 100%;
+    }
+
+    input[type='button'] {
+        width: 93%;
+        padding: 7px;
+        margin: 10px auto;
+        background-color: rgb(8, 186, 82);
+        color: #FFf;
+        font-size: 1.2em;
+        border-radius: 5px;
+    }
+
+}
+
+@media screen and (min-width: 801px) {
+
+    form {
+        margin: 20px auto;
+        width: 70%;
+    }
+
+    .wrapper-control {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    input[type='button'] {
+        width: 98%;
+        padding: 7px 0;
+        margin: 10px auto;
+        background-color: rgb(8, 186, 82);
+        color: #FFf;
+        font-size: 1.2em;
+    }
+
+
+}

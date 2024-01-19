@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD-Club Info</title>
+    <link rel="stylesheet" href="/css/semantic.min.css">
+    <link rel="stylesheet" href="/css/style2.css">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="ui massive menu">
+
+            <div class="ui container">
+                <div class="header item">
+                    <div class="link">
+                        <a href="/">Home</a>
+                    </div>
+                </div>
+                <a class="item">
+                    Blog
+                </a>
+                <a class="item">
+                    Contact
+                </a>
+                <a class="item">
+                    About
+                </a>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="ui container">
+            <form action="/edit/<%- club._id %>" class="ui form" method="POST">
+                <div class="ui three fields">
+                    <div class="field">
+                        <label for="clubName" class="ui header green">Enter the club name</label>
+                        <input type="text" name="clubName" value="<%- club.clubName %>" id="clubName">
+                    </div>
+                    <div class="field">
+                        <label for="players" class="ui header green">Enter the club name</label>
+                        <input type="text" name="players" value="<%- club.players %>" id="players">
+                    </div>
+                    <div class="field">
+                        <label for="coach" class="ui header green">Enter the club name</label>
+                        <input type="text" name="coach" value="<%- club.coach %> " id="coach">
+                    </div>
+                </div>
+                <div class="ui fluid field">
+                    <input type="submit" value="Save" class="ui button green fluid">
+                </div>
+            </form>
+            <br>
+            <br>
+
+        </div>
+    </div>
+
+
+
+    <script src=" /js/semantic.min.js"></script>
+</body>
+
+</html>

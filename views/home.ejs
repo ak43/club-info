@@ -32,21 +32,34 @@
             </div>
         </div>
         <br>
-        <br>
-        <br>
+
         <div class="ui container">
             <form action="/add" class="ui form" method="POST">
                 <div class="ui three fields">
                     <div class="field">
-                        <label for="clubName" class="ui header green">Enter the club name</label>
+                        <label for="clubName" class="ui header green">Club name</label>
                         <input type="text" name="clubName">
                     </div>
                     <div class="field">
-                        <label for="players" class="ui header green">Enter the club name</label>
+                        <label for="country" class="ui header green">Country</label>
+                        <input type="text" name="country">
+                    </div>
+                    <div class="field">
+                        <label for="yearFounded" class="ui header green">Founded in</label>
+                        <input type="text" name="yearFounded">
+                    </div>
+                </div>
+                <div class="ui three fields">
+                    <div class="field">
+                        <label for="cupsWon" class="ui header green">How many league cup?</label>
+                        <input type="text" name="cupsWon">
+                    </div>
+                    <div class="field">
+                        <label for="players" class="ui header green">Players</label>
                         <input type="text" name="players">
                     </div>
                     <div class="field">
-                        <label for="coach" class="ui header green">Enter the club name</label>
+                        <label for="coach" class="ui header green">Name of the Coach</label>
                         <input type="text" name="coach">
                     </div>
                 </div>
@@ -60,6 +73,9 @@
             <table class="ui green table">
                 <thead>
                     <th>Club Name</th>
+                    <th>Country</th>
+                    <th>Founded</th>
+                    <th>Cups Won</th>
                     <th>Players</th>
                     <th>Coach</th>
                     <th>Edit</th>
@@ -70,6 +86,9 @@
                     <% clubList.forEach(function(club){ %>
                         <tr>
                             <td><%- club.clubName %></td>
+                            <td><%- club.country %></td>
+                            <td><%- club.founded %></td>
+                            <td><%- club.cupsWon %></td>
                             <td><%- club.players %></td>
                             <td><%- club.coach %></td>
                             <td><a class="ui purple button" href="/edit/<%- club._id %>"><i

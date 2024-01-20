@@ -6,6 +6,12 @@ let clubSchema = new Schema({
         type: String,
         required: true
     },
+    country: {
+        type: String,
+        required: true
+    },
+    founded: Number,
+    cupsWon: Number,
     players: String,
     coach: String
 });

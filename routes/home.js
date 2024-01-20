@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const club = require('../models/Club');
+const Club = require('../models/Club');
 
 
 
@@ -19,10 +20,10 @@ router.get('/', async (req, res) => {
 });
 
 router.post('/add', async (req, res, next) => {
-    const { clubName, players, coach } = req.body;
+    const { clubName, country, yearFounded, cupsWon, players, coach } = req.body;
     //  console.log(`Club name : ${name}, players: ${players}, Coach: ${coach}`);
     console.log(clubName, players, coach);
-    const ucl = new club({ clubName, players, coach });
+    const ucl = new club({ clubName, country, founded: yearFounded, cupsWon, players, coach });
     await ucl.save().then((savedDoc) => {
         console.log('Saving to database is successful!');
         res.redirect('/');
@@ -50,7 +51,9 @@ router.get('/edit/:id', async (req, res) => {
 
 // ROUTE TO UPDATE DATA
 router.post('/edit/:id', (req, res, next) => {
+    req.body.founded = req.body.yearFounded;
     club.findByIdAndUpdate({ _id: req.params.id }, req.body)
+        // club.findByIdAndUpdate({ _id: req.params.id }, req.body)
         .then(() => {
             console.log('Update successful!')
             res.redirect('/');

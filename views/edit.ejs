@@ -38,8 +38,22 @@
             <form action="/edit/<%- club._id %>" class="ui form" method="POST">
                 <div class="ui three fields">
                     <div class="field">
-                        <label for="clubName" class="ui header green">Enter the club name</label>
+                        <label for="clubName" class="ui header green">Club name</label>
                         <input type="text" name="clubName" value="<%- club.clubName %>" id="clubName">
+                    </div>
+                    <div class="field">
+                        <label for="country" class="ui header green">Country</label>
+                        <input type="text" name="country" value="<%- club.country %>" id="country">
+                    </div>
+                    <div class="field">
+                        <label for="yearFounded" class="ui header green">Founded in:</label>
+                        <input type="text" name="yearFounded" value="<%- club.founded %> " id="yearFounded">
+                    </div>
+                </div>
+                <div class="ui three fields">
+                    <div class="field">
+                        <label for="cupsWon" class="ui header green">Cups Wond</label>
+                        <input type="text" name="cupsWon" value="<%- club.cupsWon %>" id="cupsWon">
                     </div>
                     <div class="field">
                         <label for="players" class="ui header green">Enter the club name</label>

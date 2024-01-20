@@ -1,4 +1,5 @@
 const express = require('express');
+const mongoose = require('mongoose');
 const dotenv = require('dotenv').config();
 
 const homeRoute = require('./routes/home');
@@ -8,7 +9,7 @@ const bodyParser = require('body-parser');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const mongoose = require('mongoose');
+
 mongoose.connect(process.env.DB_URL);
 const db = mongoose.connection;
 
@@ -17,7 +18,7 @@ db.on('error', () => {
 });
 
 
-// Adds a one-timelistener function for the event named eventName
+// Adds a one-time listener function for the event named eventName
 db.once('open', () => {
     console.log('Database connection successful');
 });

@@ -7,7 +7,6 @@
     <title>CRUD-Club Info</title>
     <link rel="stylesheet" href="/css/semantic.min.css">
     <link rel="stylesheet" href="/css/style2.css">
-
 </head>
 
 <body>
@@ -68,8 +67,21 @@
                 </div>
             </form>
             <br>
-            <br>
-
+            <!-- </div> -->
+            <!-- <form action="/home/:ctry" method="get"> -->
+            <!-- <div class="ui container"> -->
+            <div class="ui three fields div-filter">
+                <div class="field">
+                    <input type="text" name="ctry" class='filter' id='txtClubName' placeholder="Filter by Club Name"
+                        onkeyup="filterByClubName()">
+                </div>
+                <div class="field">
+                    <input type="text" name="ctry" class='filter' id='txtCountry' placeholder="Filter by Country"
+                        onkeyup="filterByCountry()">
+                </div>
+            </div>
+            <!-- </div> -->
+            <!-- </form> -->
             <table class="ui green table">
                 <thead>
                     <th>Club Name</th>
@@ -104,6 +116,9 @@
 
 
 
+
+    <script src="/js/myscript.js">
+    </script>
     <script src=" /js/semantic.min.js"></script>
 </body>
 

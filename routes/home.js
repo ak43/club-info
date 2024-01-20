@@ -76,6 +76,22 @@ router.get('/delete/:id', (req, res, next) => {
 })
 
 
+// ROUTE TO HANDLE FILTER BY COUNTRY
+router.get('/home/:id', (req, res, next) => {
+    // const clubs = await club.find({ country: req.params.ctry });
+    // if (clubs !== null) {
+    //     res.render('home', { clubList: clubs });
+    //     console.log('Filtered clubs by their country.... ' + clubs.length);
+    // } else {
+    //     console.log('Something went wrong while filtering.... ');
+    // }
+    club.find({ country: "Spain" }).then(() => {
+        console.log(`Filtered clubs by their country ... ${req.params.id}`);
+    }).catch(err => {
+        console.log('Something wrong happened when filtering clubs.... ' + err);
+    })
+})
+
 
 
 

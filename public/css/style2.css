@@ -6,3 +6,17 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+.div-filter {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-content: right;
+    width: 100%;
+    background-color: darkslategray;
+}
+
+.filter {
+    margin: 5px;
+    padding: 3px 5px;
+    border-radius: 5px;
+}
